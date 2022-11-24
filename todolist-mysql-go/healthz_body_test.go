@@ -13,5 +13,5 @@ func TestHealthz_Body(t *testing.T) {
 	response := httptest.NewRecorder()
 	Router().ServeHTTP(response, request)
 
-	assert.Equal(t, `{"dlive": true}`, response.Body.String(), "Incorrect body found")
+	assert.Equal(t, `{"alive": true}`, response.Body.String(), "Incorrect body found")
 }
